@@ -54,7 +54,7 @@ public class Insert {
 
             conn.commit();
 
-            System.out.println("插入成功");
+            System.out.println("记录成功");
 
 
         } catch (SQLException e) {

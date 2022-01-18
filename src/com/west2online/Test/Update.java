@@ -25,7 +25,7 @@ public class Update {
             Scanner scanner = new Scanner(System.in);
             System.out.printf("请输入要更改的订单的订单编号:");
             order_no = scanner.nextLine();
-            String sql = "select `good_no` from `goods` where `order_no`=?";
+            String sql = "select `good_no` from `good_order` where `order_no`=?";
 
             st = conn.prepareStatement(sql);
             st.setString(1,order_no);
@@ -38,9 +38,9 @@ public class Update {
 
             System.out.printf("请输入商品编号:");
             good_no = scanner.nextLine();
-            System.out.printf("请输入商品名:");
+            System.out.printf("请输入新的商品名:");
             good_name = scanner.nextLine();
-            System.out.printf("请输入商品价格:");
+            System.out.printf("请输入新的商品价格:");
             good_price = scanner.nextDouble();
 
 

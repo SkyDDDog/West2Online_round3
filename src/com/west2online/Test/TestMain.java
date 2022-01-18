@@ -14,6 +14,7 @@ public class TestMain {
             optional = scanner.nextInt();
             switch (optional) {
                 case 0:
+                    System.out.print("已退出系统，感谢您的使用！");
                     return;
                 case 1:
                     Insert.insert();

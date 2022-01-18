@@ -22,7 +22,7 @@ public class Select {
             System.out.printf("请输入要查询的订单编号:");
             order_no = scanner.nextLine();
 
-            String sql = "SELECT o.`order_no`,o.`good_no`,g.`good_name`,g.`good_price`,o.`order_time good_order o INNER JOIN goods g ON o.`good_no`=g.`good_no` WHERE o.`order_no`=?";
+            String sql = "SELECT o.`order_no`,o.`good_no`,g.`good_name`,g.`good_price`,o.`order_time` FROM good_order o INNER JOIN goods g ON o.`good_no`=g.`good_no` WHERE o.`order_no`=?";
 
             st = conn.prepareStatement(sql); //预编译sql,先写sql，然后不执行
 
