@@ -14,8 +14,7 @@ public class TestMain {
             optional = scanner.nextInt();
             switch (optional) {
                 case 0:
-                    GOTO outer;
-                    break;
+                    return;
                 case 1:
                     Insert.insert();
                     break;
@@ -33,8 +32,6 @@ public class TestMain {
                     break;
             }
         }
-        outer:
-        return;
 
 //        Insert.insert();
 //        Delete.delete();
