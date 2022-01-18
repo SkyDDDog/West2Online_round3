@@ -9,29 +9,32 @@ public class TestMain {
     public static void main(String[] args) {
         int optional;
         Scanner scanner = new Scanner(System.in);
-        re:
-        menu();
-        optional = scanner.nextInt();
-        switch (optional) {
-            case 0:
-                break;
-            case 1:
-                Insert.insert();
-                break;
-            case 2:
-                Delete.delete();
-                break;
-            case 3:
-                Update.update();
-                break;
-            case 4:
-                Select.select();
-                break;
-            default:
-                System.out.print("请输入合法值！");
-                GOTO re;
-                break;
+        while (true) {
+            menu();
+            optional = scanner.nextInt();
+            switch (optional) {
+                case 0:
+                    GOTO outer;
+                    break;
+                case 1:
+                    Insert.insert();
+                    break;
+                case 2:
+                    Delete.delete();
+                    break;
+                case 3:
+                    Update.update();
+                    break;
+                case 4:
+                    Select.select();
+                    break;
+                default:
+                    System.out.print("请输入合法值！");
+                    break;
+            }
         }
+        outer:
+        return;
 
 //        Insert.insert();
 //        Delete.delete();
